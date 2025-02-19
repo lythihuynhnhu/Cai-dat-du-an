@@ -30,7 +30,7 @@ class ContactService {
     }
 
     async find (filter){
-        const cursor = await thí.Contact.find(filter);
+        const cursor = await this.Contact.find(filter);
         return await cursor.toArray();
     }
 
