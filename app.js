@@ -5,9 +5,7 @@ const app = express();
 const contactsRouter = require("./app/routes/contact.route");
 const ApiError = require("./app/api-error");
 
-const ContactService = require("../services/contact.service");
-const MongoDB = require("../utils/mongodb.util");
-const ApiError = require("../api-error");
+
 app.use(cors());
 app.use(express.json());
 
