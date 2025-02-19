@@ -28,6 +28,17 @@ class ContactService {
         );
         return result;
     }
+
+    async find (filter){
+        const cursor = await thí.Contact.find(filter);
+        return await cursor.toArray();
+    }
+
+    async findByName(name){
+        return await this.find({
+            name: { $regex: new RegExp(new ReExp(name)), $options: "i" },
+        });
+    }
 }
 
 module.exports = ContactService;
