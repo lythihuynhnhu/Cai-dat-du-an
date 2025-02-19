@@ -1,4 +1,4 @@
-const{ ObjectId, ReturnDocument } = require("mongodb");
+const{ ObjectId } = require("mongodb");
 
 class ContactService {
     constructor(client) {
